@@ -1,13 +1,19 @@
+
 import "./theHeader.scss"
 import Link from "next/link"
+import { Navigation } from './Navigation';
+
+const navItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog" },
+    { label: "About", href: "/about" },
+]
 
 
 const TheHeader = () => {
     return (
         <header className="header">
-            <Link className="header__link" href="/">HOME</Link>
-            <Link className="header__link" href="/blog">BLOG</Link>
-            <Link className="header__link" href="/about">ABOUT</Link>
+            <Navigation navLinks={navItems} />
         </header>
     )
 }
